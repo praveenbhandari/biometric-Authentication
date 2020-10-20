@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        layout = this.findViewById(R.id.layout);
-        layout.setVisibility(View.INVISIBLE);
+
         myBiometricPrompt.authenticate(promptInfo);
 
     }
@@ -56,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
             super.onAuthenticationSucceeded(result);
-            layout.setVisibility(View.VISIBLE);
-            Toast.makeText(MainActivity.this, "Authentication successfully", Toast.LENGTH_SHORT).show();
+//            layout.setVisibility(View.VISIBLE);
+    //        Toast.makeText(MainActivity.this, "Authentication successfully", Toast.LENGTH_SHORT).show();
         }
 
 //onAuthenticationFailed is called when the fingerprint doesn’t match//
